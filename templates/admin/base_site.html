@@ -1,0 +1,19 @@
+{% extends 'admin/base.html' %}
+{% load static %}
+<link href="{% static 'css/external.css' %}" rel="stylesheet">
+
+
+{% block title %}{{ title }} | {{ site_title|default:_('Django site admin') }}{% endblock %}
+
+{% block branding %}
+
+
+<a class="logo-top" href="#">
+	    <img src="{% static 'img/Logo.png' %}" width="40" height="40" class="d-inline-block align-top" alt="" loading="lazy">
+	    Brand Name
+</a>
+
+<h1 id="site-name"><a href="{% url 'admin:index' %}">{{ site_title|default:_('Django site administration') }}</a></h1>
+{% endblock %}
+
+{% block nav-globol %}{% endblock %}
